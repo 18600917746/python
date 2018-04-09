@@ -89,7 +89,7 @@
 # if _userName == userName and _userPassword == userPassword:
 #     print('登录成功！{name}'.format(name=userName))
 # else:
-#     print('验证失败！')
+#     print('验证失败！{name}'.format(name=userName))
 
 # 3.循环控制语句
 # ①while 循环条件语句  支持 while else
@@ -105,17 +105,17 @@
 # else:
 #     print('输入次数过多！')
 
-# ②for in 循环语句 range(参数1,参数2,参数3) 参数1 -> 开始位置 参数2 -> 循环长度 参数3 -> 步进量
+# ②for in 循环语句 range(参数1,参数2,参数3) 参数1 -> 开始位置  默认-参数2 -> 循环次数 参数3 -> 步进量
 
 # for i in range(3):
 #     age = int(input('age:'))
 #     if age == 12:
-#         print('cg')
+#         print('成功！')
 #         break
 #     else:
-#         print('sb')
+#         print('失败！')
 
-# 关于列表的循环取值
+# 关于列表的循环取值   enumerate()
 # arr = ['a','b','c','d','e']
 # for i, j in enumerate(arr):
 #     print(i, j)

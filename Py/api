@@ -1,0 +1,35 @@
+# 用户循环输入
+        number_list = []
+        while True:
+            number = input('循环输入:')
+            if number == 'q':
+                print('退出循环', number_list)
+                exit()
+            else:
+                number_list.append(number)
+# 字符串操作
+  ##字符串也能切片
+        1.首字母大写
+            name='cheng'
+            print(name.capitalize());
+        2.统计字符串中相同的字符个数
+            name ='cheng cheng'
+            print(name.count('c')) # 2
+        3.指定字符串长度，将值放在中间，两端用指定字符补齐(必须是单字符)
+            print(name.center(50,' '))
+        4.字符串转二进制
+            print(name.encode())
+        5.判断是否以指定的字符结尾
+            print(name.endswith('g'))
+        6.字符串内变量赋值
+            str = '这是一段{str}的{neirong}'
+            print(str.format(str='替换',neirong='内容'))
+            print(str.format_map({'str':'替换','neirong':'内容'}))
+        7.字符串的长度
+            print(len(str)) 
+        8.只能包含 数字 加 字母
+            isalnum ='12w'
+            print(isalnum.isalnum()) 
+        9.只能包含字母
+            isalpha ='tyuiw'
+            print(isalpha.isalpha())

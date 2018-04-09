@@ -23,13 +23,38 @@
 
 # 1.os模块
 
-# import os
-# os.system('dir') -> 执行打印当前文件目录内容
+import os
+# def file_name(file_dir):
+#     for root, dirs, files in os.walk(file_dir):
+#         print(root) #当前目录路径
+#         print(dirs) #当前路径下所有子目录
+#         print(files) #当前路径下所有非目录子文件
+# file_name('icon')
+# list=[]
+# def file_name(file_dir):
+#     for root, dirs, files in os.walk(file_dir):
+#         # print(root,'路径') #当前目录路径
+#         # print(dirs,'子目录') #当前路径下所有子目录
+#         # print(files) #当前路径下所有非目录子文件
+#         for i in files:
+#             list.append({
+#                 'title':i.split('.')[0],
+#                 'url':i
+#             })
+# file_name('icon')
+# print(list)
+# os.system('dir') #-> 执行打印当前文件目录内容
 # cmd_res = os.system('dir') -> 只执行一次，不能进行变量存储结果
-# cmd_res = os.popen('dir').read() -> 读取当前目录内容，可以变量存储，但是需要 read() 输出
-# os.mkdir('文件名') 创建一个文件夹
+# cmd_res = os.popen('dir').read() #-> 读取当前目录内容，可以变量存储，但是需要 read() 输出
+# os.mkdir('文件夹名') #创建一个文件夹
 # print(cmd_res)
-
+# 获取文件的大小（字节）
+# fd = os.open( "foo2.txt", os.O_RDWR|os.O_CREAT )
+# b = str.encode('凄凄惨惨戚戚123')
+# os.write(fd,b)
+# os.close(fd)
+# Size = os.path.getsize('index1.py')
+# print(Size)
 # 三、编码转化
 
 # 编码转化 字符串 转化 bytes（二进制）
@@ -45,7 +70,7 @@
 
 # 1.声明 列表 -> 类数组 取值 也是通过 [下标]
 
-List = ['Zhang', 'San', 'Li', 'Si', 'Wang', 'Wang', 'Wu', 'Wang', 'Zhao', 'Liu']
+# List = ['Zhang', 'San', 'Li', 'Si', 'Wang', 'Wang', 'Wu', 'Wang', 'Zhao', 'Liu']
 
 # 2.取值
 
@@ -111,10 +136,29 @@ List = ['Zhang', 'San', 'Li', 'Si', 'Wang', 'Wang', 'Wu', 'Wang', 'Zhao', 'Liu']
 # 11.列表的合并
 
 # ①使用 extend() 同 js 的 concat()
-List1 =['1','2','3','4']
-List.extend(List1) #['Zhang', 'San', 'Li', 'Si', 'Wang', 'Wang', 'Wu', 'Wang', 'Zhao', 'Liu', '1', '2', '3', '4']
+# List1 =['1','2','3','4']
+# List.extend(List1)  #['Zhang', 'San', 'Li', 'Si', 'Wang', 'Wang', 'Wu', 'Wang', 'Zhao', 'Liu', '1', '2', '3', '4']
+# print(List)
+
+# 12.变量的删除  del 变量
+
+# 13.列表的 copy  浅 copy   深 copy 需要
+
+# import copy
+
+# list = [('a',10), ('b',21), ('c',32), ('d',40)]
+# list1 =list.copy()  浅 copy
+# list1 =copy.copy(list)  浅 copy
+# list1 =list[:]  浅 copy
+# list1 =list(list) 浅 copy
+# list1 = copy.deepcopy(list) #深 copy
+# print(list1) #[1, 2, 3, 4]
+# print(list)  #[1, 2, 3, 4]
+
+# enumerate() 循环的时候 枚举 列表的属性
+# for i,item in enumerate(list) :
+#     print(i,item)
 
 
 
 
-print(List)
